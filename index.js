@@ -23,7 +23,7 @@ const db_data = process.env.DB_DATA;
 Conn(db_url, db_user, db_pass, db_data);
 
 const port = 3000;
-app.listen(process.env.PORT | port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Servidor inicializado na porta ${port}`);
 });
 
