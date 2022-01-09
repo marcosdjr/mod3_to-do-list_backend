@@ -5,7 +5,7 @@ const tasksModel = new mongoose.Schema({
     description: { type: String, required: true},
     priority: { type: String, required: true},
     status: {type: String, required: true},
-    deadline: { type: Date, default: Date.now },
+    deadline: { type: String},
     creationDate: { type: Date, default: Date.now }
   })
   
