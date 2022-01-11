@@ -1,11 +1,10 @@
-if(process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
 }
-
 
 const express = require("express");
 const cors = require("cors");
-const Conn = require('./conn/conn');
+const Conn = require("./conn/conn");
 const tasksRouter = require("./routes/tasks.routes.js");
 
 const app = express();
@@ -24,6 +23,5 @@ Conn(db_url, db_user, db_pass, db_data);
 
 const port = 3000;
 app.listen(process.env.PORT || port, () => {
-    console.log(`Servidor inicializado na porta ${port}`);
+  console.log(`Servidor inicializado na porta ${port}`);
 });
-
